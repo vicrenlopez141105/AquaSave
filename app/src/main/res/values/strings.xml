@@ -2,4 +2,14 @@
     <string name="app_name">AquaSave</string>
 
     <string name="splashTitleTitle">AQUASAVE</string>
+
+    <string name="galleryTitleES">¡Bienvenido a AquaSave!</string>
+    <string name="gallerysubTitleES">Aquí podrás:</string>
+    <string name="todiscardText">Omitir</string>
+    
+    <string name="galleryfragmentonetext">Revisar los niveles de humedad de tu terreno</string>
+    <string name="galleryfragmenttwotext">Controlar y gestionar las zonas divididas de tu terreno</string>
+    <string name="galleryfragmentthreetext">Analizar y comparar los resultados de tu sistema de riego</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
