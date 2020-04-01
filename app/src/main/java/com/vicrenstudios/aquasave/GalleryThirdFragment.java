@@ -1,5 +1,6 @@
 package com.vicrenstudios.aquasave;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 
 /**
@@ -23,6 +25,7 @@ public class GalleryThirdFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private TextView tv3;
 
     public GalleryThirdFragment() {
         // Required empty public constructor
@@ -59,6 +62,10 @@ public class GalleryThirdFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_gallery_third, container, false);
+        View view =  inflater.inflate(R.layout.fragment_gallery_third, container, false);
+        tv3 = (TextView) view.findViewById(R.id.fragmentGalleryTextId3);
+        tv3.setTypeface(Typeface.createFromAsset(getActivity().getAssets(), "fonts/Roboto-Regular.ttf"));
+
+        return view;
     }
 }

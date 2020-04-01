@@ -1,16 +1,21 @@
 package com.vicrenstudios.aquasave;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
+import org.w3c.dom.Text;
+
 import static com.vicrenstudios.aquasave.R.id.fragmentGalleryContainerId;
+import static com.vicrenstudios.aquasave.R.id.text;
 
 public class GalleryActivity extends AppCompatActivity {
 
@@ -21,6 +26,9 @@ public class GalleryActivity extends AppCompatActivity {
     private int firstTouchX, firstTouchY;
     static int galleryPosition = 1;
     private ImageView treepoints;
+    private TextView toolbarId, tvtitle, tvsubtitle, tvomitir;
+    //Ajenos
+    private TextView text1, text2, text3;
 
 
     @Override
@@ -34,6 +42,19 @@ public class GalleryActivity extends AppCompatActivity {
         fragmentoDos = new GallerySecondFragment();
         fragmentoTres = new GalleryThirdFragment();
         treepoints = (ImageView) findViewById(R.id.actualPhotoId);
+        toolbarId = (TextView)findViewById(R.id.toolbarTVId);
+        tvtitle = (TextView)findViewById(R.id.tvTitleId);
+        tvsubtitle = (TextView)findViewById(R.id.tvSubtitleId);
+        tvomitir = (TextView)findViewById(R.id.tvOmitirId);
+
+
+        //Asignamos las fuentes
+        toolbarId.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/Roboto-BlackItalic.ttf"));
+        tvtitle.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/Roboto-Light.ttf"));
+        tvsubtitle.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/Roboto-Bold.ttf"));
+        tvomitir.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/Roboto-Light.ttf"));
+
+
         //Iniciamos el fragment
         getSupportFragmentManager().beginTransaction().add(fragmentGalleryContainerId, fragmentoUno).commit();
 
